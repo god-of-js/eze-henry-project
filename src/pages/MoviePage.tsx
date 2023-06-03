@@ -45,8 +45,8 @@ export default function MoviePage() {
     const uniqueCharacters = [...new Set(characterIds)]
 
     const charactersInMovie = characters.filter(({ _id }) => uniqueCharacters.includes(_id));
-    console.log()
-
+    
+    if (!charactersInMovie.length) return 'No cast available for this movie'
     const charactersToShow = charactersInMovie.slice(0, 12);
     let charactersString = charactersToShow.map(({name}) => name).join(', ')
     return charactersInMovie.length > 12 ? charactersString + ` +${charactersInMovie.length - 12} more` : charactersString;
