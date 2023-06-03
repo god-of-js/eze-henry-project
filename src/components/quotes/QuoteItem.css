@@ -1,0 +1,6 @@
+.quote {
+    text-align: left;
+    border-left: 2px solid var(--color-primary);
+    padding: 4px 12px;
+    margin: 12px 0;
+}

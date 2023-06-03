@@ -1,0 +1,44 @@
+.movie-page {
+    padding-bottom: 40px;
+}
+.movie-banner {
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+}
+
+.movie-main-content {
+    width: 60%;
+}
+
+.movie-name {
+    font-size: 28px;
+    color: var(--color-cool-gray);
+    font-weight: 600;
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: left;
+}
+.movie-description {
+    font-size: 16px;
+}
+.meta-data {
+    width: 20%;
+    padding: 20px 0;
+    color: var(--color-cool-gray);
+    font-size: 16px;
+}
+
+.empty-quotes {
+    padding: 80px;
+    font-size: 24px;
+    font-family: 'Cinzel Decorative', cursive;
+}

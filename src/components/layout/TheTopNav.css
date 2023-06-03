@@ -1,0 +1,18 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0 40px 0;
+}
+
+.app-name {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--color-primary);
+}
+
+ul {
+    display: flex;
+    gap: 12px;
+}

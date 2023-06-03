@@ -1,0 +1,27 @@
+.banner {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(90deg, #141414 10%, rgba(20, 20, 20, 0) 100%), url('../assets/lord-of-the-rings-banner.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  font-size: 32px;
+  font-weight: 900;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.banner-title {
+    width: 600px;
+    text-align: left;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 16px;
+}

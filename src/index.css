@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --color-primary: #ffd700;
+  --color-primary-10: #FFCA4F;
+  --color-dark-green: #004c00;
+  --color-brown: #8b4513;
+  --color-deep-red: #800000;
+  --color-cool-gray:  #808080;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-cool-gray);
+  text-decoration: inherit;
+  font-family: 'Cinzel Decorative', cursive;
+}
+a:hover {
+  color: var(--color-primary-10);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Lora', serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: var(--color-primary-10);
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button.disabled {
+  /* Styles for the disabled button */
+  opacity: 0.5;
+  cursor: not-allowed;
+  /* Add any other styles as needed */
+}
+button:hover {
+  background: var(--color-primary);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.loading {
+  font-size: 24px;
+  color: var(--color-primary-10);
+  font-family: 'Cinzel Decorative', cursive;
+  margin: auto;
+  width: 100%;
+}

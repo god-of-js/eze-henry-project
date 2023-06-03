@@ -1,0 +1,12 @@
+#root {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #242424;
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: hidden;
+}
