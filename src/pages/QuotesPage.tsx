@@ -1,9 +1,12 @@
-import QuoteItem from "components/quotes/QuoteItem";
-import { RootState } from "modules/index";
-import { getQuotes } from "modules/quotes";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import { RootState } from "modules/index";
+import { getQuotes } from "modules/quotes";
+
 import toAnyAction from "utils/helpers";
+
+import QuoteItem from "components/quotes/QuoteItem";
 
 export default function QuotesPage() {
   const dispatch = useDispatch();
