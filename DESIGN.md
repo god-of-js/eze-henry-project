@@ -30,7 +30,7 @@ Images and illustrations related to the movies are thoughtfully integrated into 
 
 Overall, the website design aims to provide an engaging and informative platform for Lord of the Rings fans to explore and discover more about their favorite movies.
 
-## Styling
+## STYLING
 
 This project utilizes CSS for the styling
 
