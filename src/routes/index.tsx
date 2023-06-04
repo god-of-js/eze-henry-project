@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 const MainLayout = lazy(() => import("../layout/MainLayout"));
 
 const MoviesPage = lazy(() => import("../pages/MoviesPage"));
-const MoviePage = lazy(() => import("../pages/MoviePage"));
+const MovieDetailsPage = lazy(() => import("../pages/MovieDetailsPage"));
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/movies/:movieId",
         id: "Movie",
-        element: <MoviePage />,
+        element: <MovieDetailsPage />,
       },
     ],
   },

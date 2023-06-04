@@ -10,7 +10,7 @@ import {
 } from "modules/movies";
 import toAnyAction, { getMovieImage } from "utils/helpers";
 
-import "./MoviePage.css";
+import "./MovieDetailsPage.css";
 import { QuoteApiResponse } from "Api";
 import { RootState } from "modules/index";
 import UiButton from "components/ui/UiButton";
