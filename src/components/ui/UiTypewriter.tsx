@@ -5,7 +5,7 @@ interface Props {
   delay?: number;
 }
 
-export default function UiTypewriter({ sentences, delay = 100 }: Props) {
+export default function UiTypewriter({ sentences }: Props) {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
