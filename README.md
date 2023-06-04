@@ -9,9 +9,7 @@ This project utilizes the Yarn package manager. If you do not have yarn, follow 
 To install the neccessary modules required for running this project locally:
 
 ```
-
   yarn
-
 ```
 
 ## SERVER
@@ -19,8 +17,5 @@ To install the neccessary modules required for running this project locally:
 To start the server locally:
 
 ```
-
 yarn dev
-
 ```
-
