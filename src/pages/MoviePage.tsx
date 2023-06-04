@@ -89,7 +89,7 @@ export default function MoviePage() {
               className="movie-banner"
               style={{ backgroundImage: `url(${bgImage})` }}
             />
-            <div className="movie-details">
+            <div className="movie-page__details">
               <div className="movie-main-content">
                 <h2 className="movie-name">{movie.name}</h2>
                 <p className="movie-description">

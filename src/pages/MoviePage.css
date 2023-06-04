@@ -9,7 +9,7 @@
     background-position: center center;
 }
 
-.movie-details {
+.movie-page__details {
     display: flex;
     justify-content: space-between;
     text-align: left;
