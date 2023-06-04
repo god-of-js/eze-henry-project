@@ -39,7 +39,7 @@ export default function MoviePage() {
       return `${hours}hrs ${remainingMinutes}mins`;
     }
   }, [movie?.runtimeInMinutes]);
-
+  // Because the API does not contain characters in a movie, we are sorting the characters in the quotes from the movie.
   const characterNames = useMemo(() => {
     const characterIds = quotes.map(({ character }) => character);
     const uniqueCharacters = [...new Set(characterIds)]
