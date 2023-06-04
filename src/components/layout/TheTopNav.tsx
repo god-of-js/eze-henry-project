@@ -14,7 +14,7 @@ export default function TheTopNav() {
           <Link to="/">Books</Link>
         </li>
         <li>
-          <Link to="/">Quotes</Link>
+          <Link to="/quotes">Quotes</Link>
         </li>
       </ul>
     </nav>

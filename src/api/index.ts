@@ -26,8 +26,13 @@ class Api {
       `/movie/${movieId}/quote?page=${page}&limit=${limit}`
     ).then((data) => data);
   }
+  getQuotes() {
+    return this.get<QuoteApiResponse>(`/quote`).then((data) => data);
+  }
   getCharacters() {
-    return this.get<{ docs: Character[]}>(`/character`).then(({ docs }) => docs);
+    return this.get<{ docs: Character[] }>(`/character`).then(
+      ({ docs }) => docs
+    );
   }
   private get<T>(url: string): Promise<T> {
     return AxiosInstance.get(url).then(({ data }) => data);

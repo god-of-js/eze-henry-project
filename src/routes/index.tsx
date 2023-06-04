@@ -5,6 +5,7 @@ const MainLayout = lazy(() => import("../layout/MainLayout"));
 
 const MoviesPage = lazy(() => import("../pages/MoviesPage"));
 const MovieDetailsPage = lazy(() => import("../pages/MovieDetailsPage"));
+const QuotesPage = lazy(() => import("../pages/QuotesPage"));
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
         path: "/movies/:movieId",
         id: "Movie",
         element: <MovieDetailsPage />,
+      },
+      {
+        path: "quotes",
+        id: "Quotes",
+        element: <QuotesPage />,
       },
     ],
   },

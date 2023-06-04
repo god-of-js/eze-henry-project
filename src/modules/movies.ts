@@ -1,8 +1,4 @@
-import {
-  createAsyncThunk,
-  createSelector,
-  createSlice,
-} from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { AppDispatch, AppState, RootState } from ".";
 import Api from "Api";
 import Movie from "types/Movie";
@@ -12,7 +8,7 @@ import Character from "types/Character";
 export interface MoviesState {
   movies: Movie[];
   quotes: Quote[];
-  characters: Character[]
+  characters: Character[];
 }
 const initialState: MoviesState = {
   characters: [],
@@ -29,20 +25,13 @@ const moviesSlice = createSlice({
     setMovie(state: MoviesState, actions: { payload: Movie }) {
       state.movies.push(actions.payload);
     },
-    setQuotes(state: MoviesState, actions: { payload: Quote[] }) {
-      state.quotes = actions.payload;
-    },
-    appendQuotes(state: MoviesState, actions: { payload: Quote[] }) {
-      state.quotes.push(...actions.payload);
-    },
     setCharacters(state: MoviesState, actions: { payload: Character[] }) {
       state.characters = actions.payload;
     },
   },
 });
 
-export const { setMovies, setMovie, setQuotes, appendQuotes, setCharacters } =
-  moviesSlice.actions;
+export const { setMovies, setMovie, setCharacters } = moviesSlice.actions;
 export default moviesSlice.reducer;
 
 const movies = (state: RootState) => state.movies.movies;
@@ -73,20 +62,10 @@ export const getMovie = (movieId: string) => {
   };
 };
 
-export const getMovieQuotes = (movieId: string, page: number) => {
-  return (dispatch: AppDispatch) => {
-    return Api.getMovieQuotesBy(movieId, page).then((data) => {
-      if (page === 1) dispatch(setQuotes(data.docs));
-      else dispatch(appendQuotes(data.docs));
-      return data;
-    });
-  };
-};
-
 export const getCharacters = () => {
   return (dispatch: AppDispatch) => {
     return Api.getCharacters().then((data) => {
-      dispatch(setCharacters(data))
+      dispatch(setCharacters(data));
     });
   };
 };

@@ -2,19 +2,15 @@ import { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import {
-  getCharacters,
-  getMovie,
-  getMovieQuotes,
-  selectMovie,
-} from "modules/movies";
+import { getCharacters, getMovie, selectMovie } from "modules/movies";
+import { getMovieQuotes } from "modules/quotes";
 import toAnyAction, { getMovieImage } from "utils/helpers";
-
-import "./MovieDetailsPage.css";
 import { QuoteApiResponse } from "Api";
 import { RootState } from "modules/index";
 import UiButton from "components/ui/UiButton";
 import QuoteItem from "components/quotes/QuoteItem";
+
+import "./MovieDetailsPage.css";
 
 export default function MoviePage() {
   const { movieId } = useParams();
@@ -22,7 +18,7 @@ export default function MoviePage() {
 
   const movie = useSelector(selectMovie(movieId!));
   const quotes = useSelector((state: RootState) => state.movies.quotes);
-  const characters = useSelector((state: RootState) => state.movies.characters)
+  const characters = useSelector((state: RootState) => state.movies.characters);
 
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
@@ -42,16 +38,19 @@ export default function MoviePage() {
   // Because the API does not contain characters in a movie, we are sorting the characters in the quotes from the movie.
   const characterNames = useMemo(() => {
     const characterIds = quotes.map(({ character }) => character);
-    const uniqueCharacters = [...new Set(characterIds)]
+    const uniqueCharacters = [...new Set(characterIds)];
 
-    const charactersInMovie = characters.filter(({ _id }) => uniqueCharacters.includes(_id));
-    
-    if (!charactersInMovie.length) return 'No cast available for this movie'
+    const charactersInMovie = characters.filter(({ _id }) =>
+      uniqueCharacters.includes(_id)
+    );
+
+    if (!charactersInMovie.length) return "No cast available for this movie";
     const charactersToShow = charactersInMovie.slice(0, 12);
-    let charactersString = charactersToShow.map(({name}) => name).join(', ')
-    return charactersInMovie.length > 12 ? charactersString + ` +${charactersInMovie.length - 12} more` : charactersString;
-
-  }, [quotes, characters])
+    let charactersString = charactersToShow.map(({ name }) => name).join(", ");
+    return charactersInMovie.length > 12
+      ? charactersString + ` +${charactersInMovie.length - 12} more`
+      : charactersString;
+  }, [quotes, characters]);
 
   const loadMoreQuotesIsDisabled = useMemo(() => {
     return page === totalPages;
