@@ -62,3 +62,9 @@ To get all characters and casts,
 ```
 getCharacters(): Character[];
 ```
+
+## Contributing
+
+To contribute or extend the API suite currently provided, the following rules are required.
+
+1. Create private methods utilizing the `private` keyword if needed to ensure the method cannot be used outside of the Api class
