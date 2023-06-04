@@ -86,7 +86,6 @@ export const getMovieQuotes = (movieId: string, page: number) => {
 export const getCharacters = () => {
   return (dispatch: AppDispatch) => {
     return Api.getCharacters().then((data) => {
-      console.log(data);
       dispatch(setCharacters(data))
     });
   };
