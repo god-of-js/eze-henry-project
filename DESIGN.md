@@ -29,3 +29,11 @@ The layout and typography are clean, allowing the movie information to be easily
 Images and illustrations related to the movies are thoughtfully integrated into the design to enhance the immersive experience.
 
 Overall, the website design aims to provide an engaging and informative platform for Lord of the Rings fans to explore and discover more about their favorite movies.
+
+## Styling
+
+This project utilizes CSS for the styling
+
+### DESIGN FILE STRUCTURE
+
+CSS files are named after the names of their corresponding components. e.g (ComponentName.css). Also, they are kept directly beside the components for ease of Navigation.
