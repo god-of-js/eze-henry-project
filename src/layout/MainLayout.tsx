@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import "./MainLayout.css";
 
-function App() {
+function MainLayout() {
   return (
     <main id="root">
       <div className="page-content">
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainLayout;

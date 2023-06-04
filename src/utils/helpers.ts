@@ -8,6 +8,7 @@ import TheReturnOfTheKing from "../assets/the-return-of-the-king.jpeg";
 import TheTwoTowers from "../assets/the-two-towers.jpeg";
 import TheUnexpectedJourney from "../assets/the-unexpected-journey.jpg";
 
+// TODO: fix type issue with async thunk
 export default function toAnyAction(action: unknown) {
   return action as AnyAction;
 }
@@ -23,7 +24,7 @@ const banners = {
   TheTwoTowers,
   TheUnexpectedJourney,
 };
-
+// We are using the movie name because we are sure of the names. In situations where the name does not exist, there is a fallback.
 export function getMovieImage(movieName: string) {
   const words = movieName.split(" ");
 
